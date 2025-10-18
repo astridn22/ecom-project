@@ -4,7 +4,8 @@
 }
 
 header {
-  border-bottom: 1px solid whitesmoke;
+  /*border-bottom: 1px solid whitesmoke;*/
+  background-color: rgba(230, 217, 235, 0.7);
 }
 
 ul {
@@ -32,6 +33,10 @@ a {
     "Lucida Sans", Arial, sans-serif;
 }
 
+a:hover {
+  color: gray;
+}
+
 main section {
   padding: 16px;
   margin: 0 48px;
@@ -45,6 +50,14 @@ main section {
   display: flex;
   justify-content: space-between;
   gap: 32px;
+}
+
+.hero {
+  height: 500px;
+  border-bottom: 1px solid;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(202, 230, 244, 0.54);
 }
 
 .card {
