@@ -1,52 +1,58 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-header {
-  /*border-bottom: 1px solid whitesmoke;*/
-  background-color: rgba(230, 217, 235, 0.7);
-}
-
-ul {
-  display: flex;
 }
 
 li {
   list-style: none;
 }
 
-nav {
-  padding: 16px;
-  margin: 0 48px;
-}
-
-nav ul {
-  justify-content: space-between;
-  align-items: center;
-}
-
 a {
   text-decoration: none;
-  color: black;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
 }
 
-a:hover {
-  color: gray;
+header {
+  background-color: rgba(230, 217, 235, 0.7);
+  padding: 16px;
+  position: fixed;
+  width: 100%;
+}
+
+nav {
+  margin: 0 64px;
+}
+
+main {
+  background-color: rgba(245, 245, 245, 1);
 }
 
 main section {
   padding: 16px;
-  margin: 0 48px;
+  margin: 0 64px;
 }
 
-.brandName {
+.logo {
   font-size: 32px;
 }
 
-.mainNav {
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav a {
+  color: inherit;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.main-nav a:hover {
+  color: gray;
+}
+
+.sub-nav {
   display: flex;
   justify-content: space-between;
   gap: 32px;
@@ -61,40 +67,72 @@ main section {
 }
 
 .card {
-  width: 320px;
-  height: auto;
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
   border: 1px solid gainsboro;
-  border-radius: 16px;
-}
-
-.cardTitle {
-  color: dimgray;
-}
-
-.card button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(57, 35, 78, 0.986);
   border-radius: 8px;
-  color: white;
-  background-color: rgba(94, 53, 133, 0.76);
-  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  background-color: white;
 }
 
-.imageContainer {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card-title {
+  color: dimgray;
+  font-weight: 400;
+  font-size: large;
+}
+
+.card-button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(130, 90, 148, 1);
+  background-color: transparent;
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.card-button:hover {
+  background-color: rgba(130, 90, 148, 1);
+  color: white;
+}
+
+.card-content footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-content p {
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.image-container {
   display: flex;
   justify-content: center;
   height: 280px;
-  border: 1px solid gainsboro;
-  border-radius: 8px;
 }
 
-img {
-  object-fit: cover;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.productList {
+.product-list {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 32px;
 }
