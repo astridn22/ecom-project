@@ -129,7 +129,7 @@ main section {
 .card-button {
   width: 100%;
   padding: 8px;
-  border: 1px solid rgba(130, 90, 148, 1);
+  border: 1px solid rgb(90, 56, 104);
   background-color: transparent;
   border-radius: 8px;
   color: inherit;
@@ -139,7 +139,7 @@ main section {
 }
 
 .card-button:hover {
-  background-color: rgba(130, 90, 148, 1);
+  background-color: rgb(90, 56, 104);
   color: white;
 }
 
@@ -242,4 +242,52 @@ main section {
 .footer-section {
   height: 200px;
   background-color: gainsboro;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.help-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.help-article {
+  width: 350px;
+  font-family: "Poppins", sans-serif;
+}
+
+.help-article div {
+  background-color: rgba(90, 56, 104, 0.836);
+  width: fit-content;
+  padding: 12px;
+  border-radius: 1000px;
+}
+
+.help-article i {
+  color: white;
+}
+
+.help-article h2 {
+  font-weight: 500;
+  font-size: larger;
+  color: rgb(90, 56, 104);
+}
+
+.help-article p {
+  text-wrap: balance;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.help-article a {
+  color: rgb(90, 56, 104);
+}
+
+.help-article a:hover {
+  color: black;
 }
