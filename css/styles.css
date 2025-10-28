@@ -10,11 +10,21 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: gray;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 header {
   background-color: rgba(230, 217, 235, 0.95);
-  padding: 16px;
+  padding: 16px 32px;
   width: 100%;
 }
 
@@ -22,13 +32,14 @@ nav {
   margin: 0 64px;
 }
 
-main {
+body {
   background-color: rgba(245, 245, 245, 1);
 }
 
 main section {
-  padding: 16px;
-  margin: 0px 64px;
+  padding: 32px;
+  margin-left: 64px;
+  margin-right: 64px;
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +63,14 @@ main section {
   font-size: 32px;
 }
 
+.logo:hover {
+  color: inherit;
+}
+
+.home-section {
+  margin-top: 16px;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -59,13 +78,8 @@ main section {
 }
 
 .main-nav a {
-  color: inherit;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-.main-nav a:hover {
-  color: gray;
 }
 
 .sub-nav {
@@ -76,7 +90,6 @@ main section {
 
 .hero {
   height: 500px;
-  border-bottom: 1px solid;
   padding: 0;
   margin: 0;
   background-color: rgba(202, 230, 244, 0.54);
@@ -85,15 +98,16 @@ main section {
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  border: 1px solid gainsboro;
+  width: 260px;
   border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   background-color: white;
@@ -102,13 +116,13 @@ main section {
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   padding: 16px;
 }
 
 .card-title {
-  color: dimgray;
-  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
   font-size: large;
 }
 
@@ -129,21 +143,27 @@ main section {
   color: white;
 }
 
-.card-content footer {
+.card-content p {
+  color: dimgray;
+  font-size: small;
+}
+
+.card-footer {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.card-content p {
-  font-weight: 400;
+.card-footer p {
+  color: inherit;
+  font-weight: 500;
   font-size: x-large;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
-  height: 280px;
+  height: 220px;
 }
 
 .image-container img {
@@ -152,9 +172,74 @@ main section {
   object-fit: contain;
 }
 
+.title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 32px;
+}
+
+@media (min-width: 992px) {
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.products-main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 16px 32px;
+  margin: 16px 64px;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.category-section {
+  height: fit-content;
+  margin: 32px 0px;
+  width: 210px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 12px 16px;
+}
+
+.category-section h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.category-section a {
+  font-family: "Poppins", sans-serif;
+}
+
+.category-section a:hover {
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid gray;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 4px;
+  font-size: medium;
+}
+
+.footer-section {
+  height: 200px;
+  background-color: gainsboro;
 }
